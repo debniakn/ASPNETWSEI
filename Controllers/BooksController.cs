@@ -15,7 +15,10 @@ namespace AspnetWSEI.Controllers
         public IActionResult Random()
         {
             var firstBook = new Book() { Name = "English" };
-            return View(firstBook);
+            var secondBook = new Book() { Name = "German Dictionary" };
+            ViewBag.Book1 = firstBook;
+            ViewData["Book2"] = secondBook;
+            return View();
         }
 
         public IActionResult Edit(int id)
